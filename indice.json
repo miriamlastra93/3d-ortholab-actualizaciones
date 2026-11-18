@@ -1,0 +1,13 @@
+{
+ "plugins": {
+  "escaneos": {
+   "version": "1.6.5",
+   "min_app": "1.4.0",
+   "nombre": "Análisis de modelos",
+   "url": "https://raw.githubusercontent.com/miriamlastra93/3d-ortholab-actualizaciones/main/escaneos-1.6.5.zip",
+   "sha256": "e6dfd2e8bb3cc145e47ee9854012628053f93494fb267197c82145c3024e1919",
+   "notas": "Análisis de modelos: dientes identificados y numerados, corregir dientes (dividir, unir, renumerar), vista de las dos arcadas simétrica y acomodable, movimiento del modelo como en MetronTrack."
+  }
+ },
+ "fecha": "2026-11-18"
+}
