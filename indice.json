@@ -1,13 +1,13 @@
 {
  "plugins": {
   "escaneos": {
-   "version": "1.10.0",
+   "version": "1.11.0",
    "min_app": "1.4.0",
    "nombre": "Análisis de modelos",
-   "url": "https://raw.githubusercontent.com/miriamlastra93/3d-ortholab-actualizaciones/main/escaneos-1.10.0.zip",
-   "sha256": "6fa4d058df5587fb28e899d422faee400bcf2d29b10d65cdb97ad6b25cb6fc24",
-   "notas": "Informe PDF propio de 3D OrthoLab Studio (estilo MetronTrack, con zócalo o a color con el PLY); las líneas del análisis quedan pegadas al modelo y rectas; clase molar y canina más precisa; curva de Spee y cortes de overjet/overbite en el informe."
+   "url": "https://raw.githubusercontent.com/miriamlastra93/3d-ortholab-actualizaciones/main/escaneos-1.11.0.zip",
+   "sha256": "e145fd65d877c3c4d1070632cd5c4dfdde132c2814105ceca4549d90a39f4f9c",
+   "notas": "Caso de ejemplo anónimo para probar el análisis de modelos; recorrido guiado del módulo; texto de la lista más legible."
   }
  },
- "fecha": "2026-11-19"
+ "fecha": "2026-11-24"
 }
