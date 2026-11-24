@@ -116,6 +116,42 @@ section > p.lead{color:var(--muted);margin-bottom:18px}
 .pronto h4{font-size:17px}
 .pronto p{font-size:15px}
 
+.precio-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.precio-top .lead{margin-bottom:0}
+.precio-top h3{font-family:Sora,sans-serif;font-weight:700;font-size:26px;color:var(--navy);margin-bottom:6px}
+.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:26px 24px;display:flex;flex-direction:column;position:relative;border:2px solid transparent}
+.plan.dest{border-color:var(--brand);transform:translateY(-6px)}
+.plan .cinta{position:absolute;top:-13px;left:22px;font-family:Sora,sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.08em;
+  text-transform:uppercase;padding:4px 12px;border-radius:999px;background:var(--brand);color:#fff}
+.plan .cinta.f{background:var(--navy);color:var(--card)}
+.plan h4{font-family:Sora,sans-serif;font-weight:700;font-size:19px;color:var(--navy)}
+.plan .nota{color:var(--muted);font-size:15px;min-height:44px;margin-top:2px}
+.monto{font-family:Sora,sans-serif;font-weight:800;font-size:38px;color:var(--ink);line-height:1.05;margin-top:14px;letter-spacing:-.01em}
+.monto small{font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0}
+.monto .x{font-size:22px;color:var(--brand-ink);margin-right:4px}
+.antes{color:var(--muted);font-size:15px;margin-top:4px;min-height:22px}
+.antes s{opacity:.8}
+.ahorro{display:inline-block;background:var(--brand-soft);color:var(--brand-ink);font-weight:700;font-size:13px;padding:2px 9px;border-radius:999px;margin-left:6px}
+.plan .btn{margin-top:20px}
+.plan .fino{text-align:center;color:var(--muted);font-size:13.5px;margin-top:8px;min-height:20px}
+.incluye{margin-top:22px;background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;font-size:16px}
+.incluye h5{grid-column:1/-1;font-family:Sora,sans-serif;font-weight:700;font-size:15px;color:var(--navy);letter-spacing:.04em;text-transform:uppercase}
+.incluye div{display:flex;gap:10px;align-items:flex-start}
+.incluye svg{width:20px;height:20px;flex:none;margin-top:2px;stroke:var(--brand);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.tarjetas{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px;color:var(--muted);font-size:14.5px}
+.tarjetas span.t{font-family:Sora,sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;border:1px solid var(--line);background:var(--card);
+  border-radius:8px;padding:4px 10px;color:var(--navy)}
+.tarjetas svg{width:16px;height:16px;stroke:var(--brand);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-3px}
+.moneda button{min-width:74px}
+.abono{margin-top:26px;display:flex;gap:14px;align-items:center;background:var(--brand-soft);color:var(--ink);border-radius:18px;padding:16px 20px;font-size:17px}
+.abono svg{width:28px;height:28px;flex:none;stroke:var(--brand-ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.abono b{color:var(--brand-ink)}
+.abono + .abono{margin-top:10px}
+#precio[data-moneda="usd"] .solo-mxn,#precio[data-moneda="mxn"] .solo-usd{display:none}
+.oferta{display:inline-block;margin-left:8px;text-decoration:none;color:#fff;background:#f2a541;border-color:#f2a541}
+.oferta:hover{filter:brightness(1.06)}
+
 details{background:var(--card);border-radius:18px;box-shadow:var(--shadow);margin-top:12px}
 summary{cursor:pointer;padding:18px 22px;font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:var(--navy);list-style:none;
   display:flex;justify-content:space-between;align-items:center;gap:12px}
@@ -141,7 +177,10 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
   .logo img{width:60px}
   h1{font-size:30px}
   .sub{font-size:17px}
-  .descargas,.pasos,.modulos,.pronto{grid-template-columns:1fr}
+  .descargas,.pasos,.modulos,.pronto,.planes,.incluye{grid-template-columns:1fr}
+  .plan.dest{transform:none}
+  .plan .nota{min-height:0}
+  .planes{gap:26px}
   .mod figure{aspect-ratio:595/460}
   .pronto figure{width:104px}
   .descargas{margin-top:30px}
@@ -156,7 +195,7 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
   <header>
     <div class="logo"><img src="logo.png" alt="3D OrthoLab Studio"></div>
     <div>
-      <span class="beta">Versión beta</span>
+      <span class="beta">Versión beta</span><a class="beta oferta" href="#precio">Prueba 3 meses · $1,850</a>
       <h1>Descarga 3D OrthoLab Studio</h1>
       <p class="sub">Análisis facial 3D · Cefalometría 2D · Análisis de modelos</p>
     </div>
@@ -242,6 +281,77 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
         <figure><img src="modulos/atm.jpg" alt="Articulación temporomandibular resaltada en un cráneo" loading="lazy"><span class="tag">Pronto</span></figure>
         <div class="txt"><h4>Evaluación ATM</h4><p>Condilografía, análisis de los cóndilos e interpretación de la resonancia magnética.</p></div>
       </article>
+    </div>
+  </section>
+
+  <section id="precio" data-moneda="mxn">
+    <div class="precio-top">
+      <div>
+        <h3>Precio</h3>
+        <p class="lead">Con cobrar un solo diagnóstico al mes, el programa se paga solo. Casos ilimitados, sin pago por caso.</p>
+      </div>
+      <div class="tabs moneda" role="tablist" aria-label="Moneda">
+        <button role="tab" id="mon-mxn" aria-selected="true">MXN</button>
+        <button role="tab" id="mon-usd" aria-selected="false">USD</button>
+      </div>
+    </div>
+
+    <div class="planes">
+      <article class="plan">
+        <span class="cinta f">Empieza aquí</span>
+        <h4>Prueba 3 meses</h4>
+        <p class="nota">Usa todo el programa con tus pacientes durante 90 días.</p>
+        <div class="monto" data-mxn="$1,850" data-usd="$100"><span class="v">$1,850</span> <small class="m">MXN</small></div>
+        <div class="antes"><span data-mxn="Menos de $21 al día" data-usd="$1.11 al día">Menos de $21 al día</span></div>
+        <a class="btn" data-pago="prueba" href="#">Empezar mi prueba</a>
+        <div class="fino">Una sola vez por doctor · se abona a tu año</div>
+      </article>
+
+      <article class="plan dest">
+        <span class="cinta">Más elegido · 2 meses gratis</span>
+        <h4>Anual</h4>
+        <p class="nota">Pagas 10 meses y usas 12. El mejor precio.</p>
+        <div class="monto solo-mxn"><span class="x">12×</span>$917 <small>MXN</small></div>
+        <div class="monto solo-usd">$599 <small>USD / año</small></div>
+        <div class="antes solo-mxn">sin intereses · o $11,000 de contado al año</div>
+        <div class="antes solo-usd">Ahorras $121 contra el mensual</div>
+        <a class="btn" data-pago="anual" href="#">Pagar anual</a>
+        <div class="fino"><span data-mxn="Sale a $30 al día · también a 3, 6 o 9 meses" data-usd="Sale a $1.64 al día">Sale a $30 al día · también a 3, 6 o 9 meses</span></div>
+      </article>
+
+      <article class="plan">
+        <span class="cinta f">Sin plazo forzoso</span>
+        <h4>Mensual</h4>
+        <p class="nota">Pagas mes a mes y cancelas cuando quieras.</p>
+        <div class="monto" data-mxn="$1,100" data-usd="$60"><span class="v">$1,100</span> <small class="m">MXN</small><small> / mes</small></div>
+        <div class="antes">Se cobra solo cada mes a tu tarjeta</div>
+        <a class="btn" data-pago="mensual" href="#">Pagar mensual</a>
+        <div class="fino">Visa · Mastercard · American Express</div>
+      </article>
+    </div>
+
+    <div class="abono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/></svg>
+      <div><b>¿Te quedas después de la prueba?</b> Tus <span data-mxn="$1,850" data-usd="$100">$1,850</span> se descuentan de tu primer año.</div>
+    </div>
+    <div class="abono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+      <div><b>Precio beta congelado.</b> Si entras durante la beta, conservas este precio mientras renueves.</div>
+    </div>
+
+    <div class="incluye">
+      <h5>Todos los planes incluyen</h5>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span><b>Casos ilimitados:</b> no pagas por caso ni por exportar informes</span></div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Análisis facial 3D, Cefalometría 2D con IA y Análisis de modelos</div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Licencia para 1 computadora, Windows o Mac</div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Actualizaciones y mejoras incluidas, te llegan solas</div>
+      <div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Te lo instalamos en línea y soporte por WhatsApp</div>
+    </div>
+
+    <div class="tarjetas">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+      Pago seguro con
+      <span class="t">VISA</span><span class="t">Mastercard</span><span class="t">AMEX</span>
     </div>
   </section>
 
@@ -332,6 +442,40 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
 </div>
 
 <script>
+// Enlaces de pago con tarjeta (los da la plataforma de cobro). Vacío = el botón dice «Pago en línea muy pronto».
+// mxn y usd por opción; los meses sin intereses solo existen en pesos.
+var PAGOS = {
+  prueba:   { mxn: "", usd: "" },
+  mensual:  { mxn: "", usd: "" },
+  anual:    { mxn: "", usd: "" }   // en pesos, la plataforma ofrece los meses sin intereses
+};
+
+(function(){
+  var moneda = "mxn";
+  function pintar(){
+    document.querySelectorAll("[data-mxn]").forEach(function(el){
+      var v = el.getAttribute("data-" + moneda);
+      var dest = el.querySelector(".v") || el;
+      dest.textContent = v;
+      var m = el.querySelector(".m");
+      if (m) m.textContent = moneda === "usd" ? "USD" : "MXN";
+    });
+    document.querySelectorAll("[data-pago]").forEach(function(a){
+      var p = PAGOS[a.getAttribute("data-pago")] || {};
+      var url = p[moneda];
+      if (!a.dataset.texto) a.dataset.texto = a.textContent;
+      if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; a.classList.remove("off"); a.textContent = a.dataset.texto; }
+      else { a.removeAttribute("href"); a.classList.add("off"); a.textContent = (a.getAttribute("data-pago") === "msi" && moneda === "usd") ? "Solo en pesos" : "Muy pronto"; }
+    });
+    document.getElementById("precio").setAttribute("data-moneda", moneda);
+    ["mxn","usd"].forEach(function(x){ document.getElementById("mon-" + x).setAttribute("aria-selected", x === moneda ? "true" : "false"); });
+  }
+  document.getElementById("mon-mxn").onclick = function(){ moneda = "mxn"; pintar(); };
+  document.getElementById("mon-usd").onclick = function(){ moneda = "usd"; pintar(); };
+  try { if (!/^es-MX/i.test(navigator.language || "") && /^(en|pt)/i.test(navigator.language || "")) moneda = "usd"; } catch(e) {}
+  pintar();
+})();
+
 // Enlaces de descarga (Google Drive, «cualquiera con el enlace»). Para una versión nueva, cambia solo estas dos líneas.
 var DESCARGAS = {
   windows: "",
