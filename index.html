@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descargar 3D OrthoLab Studio</title>
+<meta name="description" content="Descarga la versión beta de 3D OrthoLab Studio para Windows o Mac: análisis facial 3D, cefalometría 2D y análisis de modelos.">
+<meta property="og:title" content="Descargar 3D OrthoLab Studio · Beta">
+<meta property="og:description" content="Versión beta para Windows y Mac. Análisis facial 3D · Cefalometría 2D · Análisis de modelos.">
+<meta property="og:image" content="https://descargas.3dortholab.com/logo.png">
+<meta property="og:url" content="https://descargas.3dortholab.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1995ad">
+<link rel="icon" href="icono.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#1995ad; --brand-ink:#0f6d80; --brand-soft:#e3f3f6; --navy:#2c3e5c;
+  --ink:#1d2733; --muted:#5d6b7a; --line:#dde6ec; --bg:#f6fafb; --card:#ffffff;
+  --warn:#b2541f; --warn-soft:#fdf0e8; --shadow:0 18px 50px rgba(20,60,80,.12);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --brand:#2bb3cc; --brand-ink:#7fd6e6; --brand-soft:#123a44; --navy:#d7e6ef;
+    --ink:#e6eef3; --muted:#9db0bf; --line:#253744; --bg:#0d1820; --card:#13222c;
+    --warn:#f0a070; --warn-soft:#3a2418; --shadow:0 18px 50px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  font-size:18px;line-height:1.5}
+a{color:var(--brand-ink)}
+.franja{position:absolute;inset:0 0 auto 0;height:380px;z-index:0;
+  background:linear-gradient(135deg,#1995ad 0%,#127d93 55%,#2c3e5c 100%)}
+.franja::after{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.18) 1.5px,transparent 1.6px);background-size:26px 26px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 35%,#000 100%);mask-image:linear-gradient(90deg,transparent 35%,#000 100%)}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:40px 20px 56px}
+header{display:flex;align-items:center;gap:24px;color:#fff}
+.logo{width:112px;height:120px;border-radius:24px;background:#fff;display:grid;place-items:center;flex:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.logo img{width:88px;height:auto}
+.beta{display:inline-block;font-family:Sora,sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);
+  padding:4px 12px;border-radius:999px}
+h1{font-family:Sora,sans-serif;font-weight:800;font-size:44px;line-height:1.05;margin:10px 0 6px;letter-spacing:-.01em}
+.sub{font-size:20px;opacity:.92}
+
+.descargas{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.so{background:var(--card);border-radius:24px;box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;
+  border:2px solid transparent;position:relative}
+.so.tuyo{border-color:var(--brand)}
+.tuyo-tag{display:none;position:absolute;top:-13px;left:24px;background:var(--brand);color:#fff;font-family:Sora,sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.so.tuyo .tuyo-tag{display:block}
+.so-head{display:flex;align-items:center;gap:14px}
+.so-ico{width:54px;height:54px;border-radius:16px;background:var(--brand-soft);display:grid;place-items:center;flex:none}
+.so-ico svg{width:30px;height:30px;fill:var(--brand-ink)}
+.so h2{font-family:Sora,sans-serif;font-weight:700;font-size:26px;color:var(--navy)}
+.so .req{color:var(--muted);font-size:16px}
+.so ul{list-style:none;margin:18px 0 22px;display:grid;gap:6px;font-size:17px}
+.so li{display:flex;gap:10px;align-items:flex-start}
+.so li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);margin-top:9px;flex:none}
+.so li.no::before{background:var(--warn)}
+.btn{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;
+  background:var(--brand);color:#fff;font-family:Sora,sans-serif;font-weight:700;font-size:18px;
+  padding:16px 20px;border-radius:16px;transition:transform .12s ease,filter .12s ease;min-height:56px}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.btn svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.btn.off{background:var(--line);color:var(--muted);pointer-events:none}
+.peso{text-align:center;color:var(--muted);font-size:15px;margin-top:8px}
+
+.aviso{margin-top:22px;background:var(--warn-soft);border-radius:18px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;font-size:17px}
+.aviso svg{width:26px;height:26px;flex:none;stroke:var(--warn);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+.aviso b{color:var(--warn)}
+.movil{display:none;margin-top:22px;background:var(--card);border-radius:18px;padding:16px 20px;box-shadow:var(--shadow);font-size:17px}
+.movil button{margin-top:10px;font:inherit;font-weight:700;color:var(--brand-ink);background:var(--brand-soft);border:0;border-radius:12px;padding:10px 16px;cursor:pointer}
+
+section{margin-top:48px}
+section > h3{font-family:Sora,sans-serif;font-weight:700;font-size:26px;color:var(--navy);margin-bottom:6px}
+section > p.lead{color:var(--muted);margin-bottom:18px}
+.tabs{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px;margin-bottom:18px}
+.tabs button{font:inherit;font-family:Sora,sans-serif;font-weight:600;font-size:15px;border:0;background:none;color:var(--muted);
+  padding:8px 18px;border-radius:10px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--brand);color:#fff}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:p}
+.paso{background:var(--card);border-radius:20px;padding:22px;box-shadow:var(--shadow);counter-increment:p}
+.paso::before{content:counter(p);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;
+  background:var(--brand-soft);color:var(--brand-ink);font-family:Sora,sans-serif;font-weight:800;margin-bottom:12px}
+.paso h4{font-family:Sora,sans-serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:6px}
+.paso p{font-size:16px;color:var(--ink)}
+.paso p + p{margin-top:8px}
+.paso kbd{font-family:inherit;font-weight:700;background:var(--brand-soft);color:var(--brand-ink);padding:1px 7px;border-radius:6px;white-space:nowrap}
+[hidden]{display:none!important}
+
+details{background:var(--card);border-radius:18px;box-shadow:var(--shadow);margin-top:12px}
+summary{cursor:pointer;padding:18px 22px;font-family:Sora,sans-serif;font-weight:600;font-size:17px;color:var(--navy);list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;color:var(--brand);line-height:1}
+details[open] summary::after{content:"−"}
+.det{padding:0 22px 20px;font-size:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
+th{font-family:Sora,sans-serif;font-weight:600;color:var(--navy);font-size:14px}
+thead th{border-top:0;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.det p + p{margin-top:8px}
+
+footer{margin-top:56px;text-align:center;color:var(--muted);font-size:15px}
+footer .priv{display:inline-flex;align-items:center;gap:8px;background:var(--card);border-radius:999px;padding:8px 16px;box-shadow:var(--shadow);margin-bottom:14px;color:var(--ink)}
+footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@media (max-width:760px){
+  .franja{height:330px}
+  .wrap{padding:28px 16px 40px}
+  header{gap:16px;align-items:flex-start}
+  .logo{width:76px;height:82px;border-radius:18px}
+  .logo img{width:60px}
+  h1{font-size:30px}
+  .sub{font-size:17px}
+  .descargas,.pasos{grid-template-columns:1fr}
+  .descargas{margin-top:30px}
+  .so{padding:22px}
+  th,td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+<div class="franja" aria-hidden="true"></div>
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="logo.png" alt="3D OrthoLab Studio"></div>
+    <div>
+      <span class="beta">Versión beta</span>
+      <h1>Descarga 3D OrthoLab Studio</h1>
+      <p class="sub">Análisis facial 3D · Cefalometría 2D · Análisis de modelos</p>
+    </div>
+  </header>
+
+  <div class="descargas">
+    <article class="so" id="so-windows">
+      <span class="tuyo-tag">Tu computadora</span>
+      <div class="so-head">
+        <div class="so-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.1 10.4 4v7.3H3V5.1Zm0 13.8 7.4 1.1v-7.2H3v6.1Zm8.3 1.2L21 21.5v-8.7h-9.7v7.3Zm0-16.2v7.4H21V2.5l-9.7 1.4Z"/></svg></div>
+        <div><h2>Windows</h2><div class="req">Windows 10 u 11 de 64 bits</div></div>
+      </div>
+      <ul>
+        <li>Procesador Intel Core i5 / Ryzen 5 o mejor</li>
+        <li>8 GB de RAM (mejor 16 GB)</li>
+        <li>3 GB libres en disco</li>
+        <li>La IA corre sin tarjeta NVIDIA</li>
+      </ul>
+      <a class="btn" id="btn-windows" href="#" data-falta="1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+        Descargar para Windows
+      </a>
+      <div class="peso">Instalador .exe · 677 MB</div>
+    </article>
+
+    <article class="so" id="so-mac">
+      <span class="tuyo-tag">Tu computadora</span>
+      <div class="so-head">
+        <div class="so-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.9-.9-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.2 1.7 2.4 3 2.4 1.2-.1 1.6-.8 3.1-.8 1.4 0 1.8.8 3.1.8 1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.7-4.1ZM14.1 5.5c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4Z"/></svg></div>
+        <div><h2>Mac</h2><div class="req">macOS 14 Sonoma o más nuevo</div></div>
+      </div>
+      <ul>
+        <li>Chip Apple M1, M2, M3 o M4</li>
+        <li>8 GB de RAM (mejor 16 GB)</li>
+        <li>5 GB libres en disco</li>
+        <li class="no">No funciona en Mac con procesador Intel</li>
+      </ul>
+      <a class="btn" id="btn-mac" href="#" data-falta="1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+        Descargar para Mac
+      </a>
+      <div class="peso">Imagen de disco .dmg · 1.1 GB</div>
+    </article>
+  </div>
+
+  <div class="movil" id="movil">
+    <b>Estás en el celular.</b> El programa se instala en una computadora (Windows o Mac). Copia este enlace y ábrelo allá.
+    <br><button type="button" id="copiar">Copiar enlace</button>
+  </div>
+
+  <div class="aviso" role="note">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+    <div><b>Es una versión beta.</b> Ya puedes usarla con tus pacientes, pero todavía la estamos puliendo: si algo falla o se ve raro, avísame y lo arreglo. Las mejoras te llegan solas desde el programa.</div>
+  </div>
+
+  <section>
+    <h3>Cómo instalarlo</h3>
+    <p class="lead">Tres pasos. La primera vez tu computadora te va a pedir confirmar, es normal.</p>
+    <div class="tabs" role="tablist" aria-label="Sistema">
+      <button role="tab" id="tab-windows" aria-selected="true" aria-controls="pasos-windows">Windows</button>
+      <button role="tab" id="tab-mac" aria-selected="false" aria-controls="pasos-mac">Mac</button>
+    </div>
+
+    <div class="pasos" id="pasos-windows" role="tabpanel" aria-labelledby="tab-windows">
+      <div class="paso">
+        <h4>Descarga</h4>
+        <p>Toca <kbd>Descargar para Windows</kbd>. Google Drive avisa que el archivo es muy grande para revisarlo: dale <kbd>Descargar de todos modos</kbd>.</p>
+      </div>
+      <div class="paso">
+        <h4>Instala</h4>
+        <p>Abre el archivo descargado. Si sale la ventana azul «Windows protegió su PC», toca <kbd>Más información</kbd> y luego <kbd>Ejecutar de todas formas</kbd>.</p>
+        <p>Sigue el instalador con <kbd>Siguiente</kbd>.</p>
+      </div>
+      <div class="paso">
+        <h4>Activa</h4>
+        <p>Abre 3D OrthoLab Studio desde el ícono del escritorio. Te muestra el código de tu equipo: toca <kbd>Copiar código</kbd> y mándamelo por WhatsApp.</p>
+        <p>Te contesto con tu clave: la pegas en esa misma ventana y listo.</p>
+      </div>
+    </div>
+
+    <div class="pasos" id="pasos-mac" role="tabpanel" aria-labelledby="tab-mac" hidden>
+      <div class="paso">
+        <h4>Descarga</h4>
+        <p>Toca <kbd>Descargar para Mac</kbd>. Google Drive avisa que el archivo es muy grande para revisarlo: dale <kbd>Descargar de todos modos</kbd>.</p>
+      </div>
+      <div class="paso">
+        <h4>Instala</h4>
+        <p>Abre el .dmg y arrastra 3D OrthoLab Studio a la carpeta <kbd>Aplicaciones</kbd>.</p>
+        <p>La primera vez, si la Mac dice que no puede abrirlo: ve a <kbd>Configuración del Sistema → Privacidad y seguridad</kbd>, baja y toca <kbd>Abrir de todos modos</kbd>.</p>
+      </div>
+      <div class="paso">
+        <h4>Activa</h4>
+        <p>Abre 3D OrthoLab Studio desde Aplicaciones. Te muestra el código de tu equipo: toca <kbd>Copiar código</kbd> y mándamelo por WhatsApp.</p>
+        <p>Te contesto con tu clave: la pegas en esa misma ventana y listo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Preguntas</h3>
+    <details>
+      <summary>¿Qué computadora necesito?</summary>
+      <div class="det">
+        <table>
+          <thead><tr><th></th><th>Windows</th><th>Mac</th></tr></thead>
+          <tbody>
+            <tr><th>Sistema</th><td>Windows 10 de 64 bits (mejor Windows 11)</td><td>macOS 14 Sonoma o más nuevo</td></tr>
+            <tr><th>Procesador</th><td>Intel Core i5 / Ryzen 5 de 2018 en adelante</td><td>Chip Apple M1 o más nuevo</td></tr>
+            <tr><th>RAM</th><td>8 GB cerrando otros programas · 16 GB recomendado</td><td>8 GB cerrando otros programas · 16 GB recomendado</td></tr>
+            <tr><th>Disco libre</th><td>3 GB + tus casos (mejor 10 GB en SSD)</td><td>5 GB + tus casos (mejor 15 GB)</td></tr>
+            <tr><th>Pantalla</th><td>1366 × 768 o más (mejor Full HD)</td><td>MacBook de 13" o más</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px"><b>¿Cómo lo reviso?</b> En Windows: Configuración → Sistema → Información. En Mac: menú de la manzana → Acerca de esta Mac.</p>
+      </div>
+    </details>
+    <details>
+      <summary>¿Necesito internet?</summary>
+      <div class="det"><p>Solo para activar el programa y para recibir las mejoras. Todo el análisis se hace en tu computadora.</p></div>
+    </details>
+    <details>
+      <summary>¿Las fotos de mis pacientes se suben a algún lado?</summary>
+      <div class="det"><p>No. Las fotos, radiografías y escaneos de tus pacientes nunca salen de tu computadora.</p></div>
+    </details>
+    <details>
+      <summary>No pude instalarlo, ¿me ayudas?</summary>
+      <div class="det"><p>Claro. Descarga <a href="https://anydesk.com/es" target="_blank" rel="noopener">AnyDesk</a> (es gratis), pásame tu número de AnyDesk y te lo dejo funcionando en línea.</p>
+      <p>En Mac, la primera vez AnyDesk te pide permiso de «Grabación de pantalla» y «Accesibilidad».</p></div>
+    </details>
+    <details>
+      <summary>Mi Mac tiene procesador Intel</summary>
+      <div class="det"><p>Por ahora solo funciona en Mac con chip Apple (M1 o más nueva). Para saber cuál tienes: menú de la manzana → Acerca de esta Mac → «Chip».</p></div>
+    </details>
+  </section>
+
+  <footer>
+    <div class="priv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>Las fotos de tus pacientes nunca salen de tu computadora</div>
+    <div>Dra. Miriam Lastra · 3D OrthoLab</div>
+  </footer>
+</div>
+
+<script>
+// Enlaces de descarga (Google Drive, «cualquiera con el enlace»). Para una versión nueva, cambia solo estas dos líneas.
+var DESCARGAS = {
+  windows: "",
+  mac: ""
+};
+
+(function(){
+  ["windows","mac"].forEach(function(so){
+    var a = document.getElementById("btn-" + so);
+    if (DESCARGAS[so]) { a.href = DESCARGAS[so]; a.removeAttribute("data-falta"); }
+    else { a.classList.add("off"); a.lastChild.textContent = " Muy pronto"; }
+  });
+
+  var ua = navigator.userAgent || "";
+  var plat = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+  var movil = /Android|iPhone|iPad|iPod/i.test(ua) || (/Mac/.test(plat) && navigator.maxTouchPoints > 1);
+  var so = movil ? null : (/Mac/i.test(plat) || /Macintosh/.test(ua) ? "mac" : (/Win/i.test(plat) || /Windows/.test(ua) ? "windows" : null));
+
+  if (movil) document.getElementById("movil").style.display = "block";
+  if (so) {
+    document.getElementById("so-" + so).classList.add("tuyo");
+    if (so === "mac") { // la Mac primero
+      var d = document.querySelector(".descargas");
+      d.insertBefore(document.getElementById("so-mac"), d.firstChild);
+      elegir("mac");
+    }
+  }
+
+  function elegir(s){
+    ["windows","mac"].forEach(function(x){
+      document.getElementById("tab-" + x).setAttribute("aria-selected", x === s ? "true" : "false");
+      document.getElementById("pasos-" + x).hidden = x !== s;
+    });
+  }
+  document.getElementById("tab-windows").onclick = function(){ elegir("windows"); };
+  document.getElementById("tab-mac").onclick = function(){ elegir("mac"); };
+
+  document.getElementById("copiar").onclick = function(){
+    var b = this, url = location.href.split("#")[0];
+    function ok(){ b.textContent = "¡Copiado!"; }
+    try { navigator.clipboard.writeText(url).then(ok, function(){ prompt("Copia el enlace:", url); }); }
+    catch(e){ prompt("Copia el enlace:", url); }
+  };
+})();
+</script>
+</body>
+</html>
