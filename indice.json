@@ -9,5 +9,11 @@
    "notas": "Caso de ejemplo anónimo para probar el análisis de modelos; recorrido guiado del módulo; texto de la lista más legible."
   }
  },
- "fecha": "2026-11-24"
+ "fecha": "2026-11-25",
+ "app": {
+  "version": "1.6.2",
+  "url": "https://drive.usercontent.google.com/download?id=1vKVH44jy_XX2AWiT03dsd9TIoDYUqMnH&export=download&confirm=t",
+  "sha256": "906e486de63d6a38707fe90b4e9afd8531801be25ac7832c53ae7b8cc2660e87",
+  "notas": "Cefalometría: análisis de McNamara con vía aérea, mejores puntos de tejidos blandos y ajuste de puntos más fácil. Fecha de nacimiento del paciente (la edad se calcula sola). Análisis submentoniano mejorado y proporciones transversales (sin orejas). Trazos en PNG transparente. Cara 3D con mejor frente y cabello. Botón «Siguiente» más visible y análisis más rápido."
+ }
 }
