@@ -11,10 +11,10 @@
  },
  "fecha": "2026-11-26",
  "app": {
-  "version": "1.6.2",
+  "version": "1.7.0",
   "url": "https://drive.usercontent.google.com/download?id=1vKVH44jy_XX2AWiT03dsd9TIoDYUqMnH&export=download&confirm=t",
-  "sha256": "906e486de63d6a38707fe90b4e9afd8531801be25ac7832c53ae7b8cc2660e87",
-  "notas": "Cefalometría: análisis de McNamara con vía aérea, mejores puntos de tejidos blandos y ajuste de puntos más fácil. Fecha de nacimiento del paciente (la edad se calcula sola). Análisis submentoniano mejorado y proporciones transversales (sin orejas). Trazos en PNG transparente. Cara 3D con mejor frente y cabello. Botón «Siguiente» más visible y análisis más rápido."
+  "sha256": "738660253b0eb5603bffb35694493ff2654682c7a823a5747cbf4e08be263c3b",
+  "notas": "Cefalometría: las siluetas se quedan fijas al mover un punto; línea de tejidos blandos más precisa (glabela, nasion, nariz, labios); doble clic en el punto naranja para darlo por bueno; arrastrar mueve la radiografía; canino y premolar opcionales, ajuste fino de cada diente y «No disponible» para dientes ausentes; barra de vista arriba de la radiografía. Análisis facial: la guía y la lista siguen al punto que mueves; fecha de nacimiento con día, mes y año; interruptor del fondo negro; la lateral se puede agregar después. La app hace una tarea pesada a la vez para no saturar la computadora."
  },
  "app_mac": {
   "version": "1.6.2",
