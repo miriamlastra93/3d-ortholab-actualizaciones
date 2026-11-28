@@ -149,6 +149,11 @@ section > p.lead{color:var(--muted);margin-bottom:18px}
 .abono svg{width:28px;height:28px;flex:none;stroke:var(--brand-ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .abono b{color:var(--brand-ink)}
 .abono + .abono{margin-top:10px}
+.abono.primero{margin:0 0 22px;background:var(--card);border:2px solid var(--brand);box-shadow:var(--shadow)}
+.abono.primero s{color:var(--muted);font-weight:400}
+.abono .btn.mini{margin:0 0 0 auto;flex:none;width:auto;padding:10px 18px;font-size:15px;border-radius:12px}
+#informe[data-moneda="usd"] .solo-mxn,#informe[data-moneda="mxn"] .solo-usd{display:none}
+@media (max-width:720px){.abono{flex-wrap:wrap}.abono .btn.mini{margin:6px 0 0;width:100%}}
 #precio[data-moneda="usd"] .solo-mxn,#precio[data-moneda="mxn"] .solo-usd{display:none}
 .oferta{display:inline-block;margin-left:8px;text-decoration:none;color:#fff;background:#f2a541;border-color:#f2a541}
 .oferta:hover{filter:brightness(1.06)}
@@ -160,6 +165,10 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:24px;color:var(--brand);line-height:1}
 details[open] summary::after{content:"−"}
 .det{padding:0 22px 20px;font-size:16px}
+.paso a{color:var(--brand-ink);font-weight:600}
+details.yo{margin-top:22px}
+details.yo .det{padding-top:4px}
+details.yo .paso{box-shadow:none;border:1px solid var(--line)}
 table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{text-align:left;padding:9px 10px;border-top:1px solid var(--line);vertical-align:top}
 th{font-family:Sora,sans-serif;font-weight:600;color:var(--navy);font-size:14px}
@@ -262,7 +271,7 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
       </article>
       <article class="mod">
         <figure><img src="modulos/ceph.jpg" alt="Cráneo lateral con trazado cefalométrico" loading="lazy"><span class="tag">Incluido</span></figure>
-        <div class="txt"><h4>Cefalometría 2D</h4><p>La IA propone los puntos en la lateral de cráneo; tú los ajustas. Steiner, Roth-Jarabak y Ricketts.</p></div>
+        <div class="txt"><h4>Cefalometría 2D</h4><p>La IA propone los puntos en la lateral de cráneo; tú los ajustas. Steiner, Roth-Jarabak, Ricketts y McNamara.</p></div>
       </article>
       <article class="mod">
         <figure><img src="modulos/modelos.jpg" alt="Modelos dentales 3D a color" loading="lazy"><span class="tag">Incluido</span></figure>
@@ -292,8 +301,8 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
         <p class="lead">Con cobrar un solo diagnóstico al mes, el programa se paga solo. Casos ilimitados, sin pago por caso.</p>
       </div>
       <div class="tabs moneda" role="tablist" aria-label="Moneda">
-        <button role="tab" id="mon-mxn" aria-selected="true">MXN</button>
-        <button role="tab" id="mon-usd" aria-selected="false">USD</button>
+        <button role="tab" id="mon-mxn" data-mon="mxn" aria-selected="true">MXN</button>
+        <button role="tab" id="mon-usd" data-mon="usd" aria-selected="false">USD</button>
       </div>
     </div>
 
@@ -356,9 +365,102 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
     </div>
   </section>
 
+  <section id="informe" data-moneda="mxn">
+    <div class="precio-top">
+      <div>
+        <h3>¿Prefieres que 3D OrthoLab te haga el informe?</h3>
+        <p class="lead">Si no tienes computadora o todavía no quieres el programa, nosotros hacemos el análisis. Pagas el informe, nos mandas por WhatsApp la lateral de cráneo y las fotos del paciente, y te regresamos el informe 2D en PDF, revisado por una ortodoncista y en español.</p>
+      </div>
+      <div class="tabs moneda" role="tablist" aria-label="Moneda">
+        <button role="tab" data-mon="mxn" aria-selected="true">MXN</button>
+        <button role="tab" data-mon="usd" aria-selected="false">USD</button>
+      </div>
+    </div>
+
+    <div class="abono primero">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7Z"/></svg>
+      <div><b>¿Primera vez?</b> Tu primer informe 2D completo a mitad de precio: <b><span data-mxn="$145 MXN" data-usd="$8 USD">$145 MXN</span></b> <s><span data-mxn="$290" data-usd="$16">$290</span></s>. Una vez por doctor.</div>
+      <a class="btn mini" data-pago="informe_primero" href="#">Pagar mi primer informe</a>
+    </div>
+
+    <div class="planes">
+      <article class="plan">
+        <h4>Solo cefalometría</h4>
+        <p class="nota">Steiner, Roth-Jarabak, Ricketts y McNamara sobre la lateral de cráneo.</p>
+        <div class="monto" data-mxn="$220" data-usd="$12"><span class="v">$220</span> <small class="m">MXN</small></div>
+        <div class="antes">por paciente</div>
+        <a class="btn" data-pago="informe_ceph" href="#">Pagar informe</a>
+        <div class="fino">Visa · Mastercard · American Express</div>
+      </article>
+
+      <article class="plan dest">
+        <span class="cinta">Recomendado</span>
+        <h4>Informe 2D completo</h4>
+        <p class="nota">La cefalometría con sus cuatro análisis más el análisis facial en fotos.</p>
+        <div class="monto" data-mxn="$290" data-usd="$16"><span class="v">$290</span> <small class="m">MXN</small></div>
+        <div class="antes"><span data-mxn="por paciente · $50 menos que por separado" data-usd="por paciente · $3 menos que por separado">por paciente · $50 menos que por separado</span></div>
+        <a class="btn" data-pago="informe_completo" href="#">Pagar informe</a>
+        <div class="fino">Visa · Mastercard · American Express</div>
+      </article>
+
+      <article class="plan">
+        <h4>Solo análisis facial</h4>
+        <p class="nota">Tercios, quintos, perfil, sonrisa y submentón en las fotos clínicas.</p>
+        <div class="monto" data-mxn="$120" data-usd="$7"><span class="v">$120</span> <small class="m">MXN</small></div>
+        <div class="antes">por paciente</div>
+        <a class="btn" data-pago="informe_facial" href="#">Pagar informe</a>
+        <div class="fino">Visa · Mastercard · American Express</div>
+      </article>
+    </div>
+
+    <div class="abono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>
+      <div><b>Paquete de 5 informes completos:</b> <span data-mxn="$1,300 MXN" data-usd="$70 USD">$1,300 MXN</span> (<span data-mxn="$260" data-usd="$14">$260</span> cada uno). Si haces 5 o más pacientes al mes, mejor el programa: <span data-mxn="$1,100" data-usd="$60">$1,100</span> al mes y casos ilimitados.</div>
+      <a class="btn mini" data-pago="informe_paquete5" href="#">Pagar paquete</a>
+    </div>
+    <div class="abono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M10 2h4"/></svg>
+      <div><b>¿Lo necesitas hoy?</b> Urgente, el mismo día: <span data-mxn="+$100 MXN" data-usd="+$6 USD">+$100 MXN</span> por paciente.</div>
+      <a class="btn mini" data-pago="informe_urgente" href="#">Pagar urgente</a>
+    </div>
+    <div class="abono">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12Z"/></svg>
+      <div><b>Ya pagué, ¿y ahora?</b> Mándanos por WhatsApp tu comprobante, la lateral de cráneo y las fotos del paciente.</div>
+      <a class="btn mini" data-wa="Hola, ya pagué un informe 2D. Te mando la lateral de cráneo y las fotos del paciente." href="#">Enviar por WhatsApp</a>
+    </div>
+
+    <div class="tarjetas">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+      Pago seguro con
+      <span class="t">VISA</span><span class="t">Mastercard</span><span class="t">AMEX</span>
+    </div>
+  </section>
+
   <section>
     <h3>Cómo instalarlo</h3>
-    <p class="lead">Tres pasos. La primera vez tu computadora te va a pedir confirmar, es normal.</p>
+    <p class="lead">Nosotros te lo dejamos instalado y activado en línea, en unos 15 minutos. Solo necesitas internet y AnyDesk, un programa gratis para que veamos tu pantalla.</p>
+
+    <div class="pasos">
+      <div class="paso">
+        <h4>Descarga AnyDesk</h4>
+        <p>Es gratis, en <a href="https://anydesk.com/es" target="_blank" rel="noopener">anydesk.com/es</a>. Descárgalo y ábrelo.</p>
+        <p>En Mac, la primera vez te pide permiso de <kbd>Grabación de pantalla</kbd> y <kbd>Accesibilidad</kbd>: actívalos.</p>
+      </div>
+      <div class="paso">
+        <h4>Mándanos tu número</h4>
+        <p>AnyDesk te muestra un número de 9 o 10 cifras, «Tu dirección». Mándanoslo por WhatsApp y quedamos en una hora.</p>
+      </div>
+      <div class="paso">
+        <h4>Acepta y listo</h4>
+        <p>Cuando nos conectemos, toca <kbd>Aceptar</kbd> en AnyDesk. Nosotros descargamos, instalamos y activamos 3D OrthoLab Studio en tu computadora.</p>
+        <p>Al terminar, ya lo tienes en tu escritorio, listo para tu primer paciente.</p>
+      </div>
+    </div>
+
+    <details class="yo">
+      <summary>¿Prefieres instalarlo tú?</summary>
+      <div class="det">
+    <p>Tres pasos. La primera vez tu computadora te va a pedir confirmar, es normal.</p>
     <div class="tabs" role="tablist" aria-label="Sistema">
       <button role="tab" id="tab-windows" aria-selected="true" aria-controls="pasos-windows">Windows</button>
       <button role="tab" id="tab-mac" aria-selected="false" aria-controls="pasos-mac">Mac</button>
@@ -397,6 +499,8 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
         <p>Te contesto con tu clave: la pegas en esa misma ventana y listo.</p>
       </div>
     </div>
+      </div>
+    </details>
   </section>
 
   <section>
@@ -427,7 +531,7 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
     </details>
     <details>
       <summary>No pude instalarlo, ¿me ayudas?</summary>
-      <div class="det"><p>Claro. Descarga <a href="https://anydesk.com/es" target="_blank" rel="noopener">AnyDesk</a> (es gratis), pásame tu número de AnyDesk y te lo dejo funcionando en línea.</p>
+      <div class="det"><p>Claro. Descarga <a href="https://anydesk.com/es" target="_blank" rel="noopener">AnyDesk</a> (es gratis), mándame por WhatsApp tu número de AnyDesk y te lo dejo funcionando en línea, aunque ya hayas empezado tú.</p>
       <p>En Mac, la primera vez AnyDesk te pide permiso de «Grabación de pantalla» y «Accesibilidad».</p></div>
     </details>
     <details>
@@ -443,12 +547,30 @@ footer .priv svg{width:18px;height:18px;stroke:var(--brand);fill:none;stroke-wid
 </div>
 
 <script>
+// Número de WhatsApp para pedir informes (10 dígitos de México o con lada). Vacío = el botón dice «Muy pronto».
+var WHATSAPP = "";
+(function(){
+  var n = WHATSAPP.replace(/\D/g, "");
+  if (n.length === 10) n = "52" + n;
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    if (n) { a.href = "https://wa.me/" + n + "?text=" + encodeURIComponent(a.getAttribute("data-wa")); a.target = "_blank"; a.rel = "noopener"; }
+    else { a.removeAttribute("href"); a.classList.add("off"); a.textContent = "Muy pronto"; }
+  });
+})();
+
 // Enlaces de pago con tarjeta (los da la plataforma de cobro). Vacío = el botón dice «Pago en línea muy pronto».
 // mxn y usd por opción; los meses sin intereses solo existen en pesos.
 var PAGOS = {
   prueba:   { mxn: "", usd: "" },
   mensual:  { mxn: "", usd: "" },
-  anual:    { mxn: "", usd: "" }   // en pesos, la plataforma ofrece los meses sin intereses
+  anual:    { mxn: "", usd: "" },  // en pesos, la plataforma ofrece los meses sin intereses
+  // Servicio de informe 2D (3D OrthoLab hace el análisis)
+  informe_primero:   { mxn: "", usd: "" },  // primer informe completo a mitad de precio, una vez por doctor
+  informe_ceph:      { mxn: "", usd: "" },
+  informe_completo:  { mxn: "", usd: "" },
+  informe_facial:    { mxn: "", usd: "" },
+  informe_paquete5:  { mxn: "", usd: "" },
+  informe_urgente:   { mxn: "", usd: "" }
 };
 
 (function(){
@@ -468,11 +590,10 @@ var PAGOS = {
       if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; a.classList.remove("off"); a.textContent = a.dataset.texto; }
       else { a.removeAttribute("href"); a.classList.add("off"); a.textContent = (a.getAttribute("data-pago") === "msi" && moneda === "usd") ? "Solo en pesos" : "Muy pronto"; }
     });
-    document.getElementById("precio").setAttribute("data-moneda", moneda);
-    ["mxn","usd"].forEach(function(x){ document.getElementById("mon-" + x).setAttribute("aria-selected", x === moneda ? "true" : "false"); });
+    ["precio","informe"].forEach(function(id){ var s = document.getElementById(id); if (s) s.setAttribute("data-moneda", moneda); });
+    document.querySelectorAll("[data-mon]").forEach(function(b){ b.setAttribute("aria-selected", b.getAttribute("data-mon") === moneda ? "true" : "false"); });
   }
-  document.getElementById("mon-mxn").onclick = function(){ moneda = "mxn"; pintar(); };
-  document.getElementById("mon-usd").onclick = function(){ moneda = "usd"; pintar(); };
+  document.querySelectorAll("[data-mon]").forEach(function(b){ b.onclick = function(){ moneda = b.getAttribute("data-mon"); pintar(); }; });
   try { if (!/^es-MX/i.test(navigator.language || "") && /^(en|pt)/i.test(navigator.language || "")) moneda = "usd"; } catch(e) {}
   pintar();
 })();
